@@ -163,10 +163,11 @@ ul {
 /* ----------------SLIDER------------------ */
 .slider {
   padding: 188px 0;
-  /* background-color: var(--color-title); */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
   background-image: var(--bg-title), url(../images/bg-people-office.jpg);
   background-size: cover;
-  /* background-repeat: repeat; */
   background-position: center;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -228,7 +229,7 @@ ul {
   margin-bottom: 8px;
   justify-content: center;
   align-items: center;
-  background-color: #F4F4FD;
+  background-color: var(--bg-team);
   border-radius: 4px;
 }
 
@@ -336,11 +337,9 @@ ul {
 }
 
 /* ----------------Costumers--------------- */
-
 .costumers {
   padding-top: 120px;
   padding-bottom: 120px;
-  outline: 2px tomato solid;
 }
 
 .costumers-title {
@@ -359,10 +358,6 @@ ul {
   gap: var(--gap-photo);
 }
 
-.costumer-item {}
-
-
-
 .costumer-link {
   display: flex;
   width: 168px;
@@ -371,20 +366,19 @@ ul {
   align-items: center;
   border: 1px solid var(--color-icon);
   border-radius: 4px;
-  fill: var(--color-icon);
+  color: var(--color-icon);
 }
-
 
 .costumer-link:hover,
 .costumer-link:focus {
-  fill: var(--bg-btn-hero);
+  color: var(--bg-btn-hero);
   border: 1px solid var(--bg-btn-hero)
 }
 
 .costumer-item-icon {
   width: 104px;
   height: 56px;
-  fill: inherit;
+  fill: currentColor;
 }
 
 /* ----------------FOOTER------------------ */
@@ -412,25 +406,19 @@ ul {
   margin-top: 16px;
 }
 
-.footer-left-column {}
-
 .social-title {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+  color: var(--color-title-contrast);
 }
-
-.footer-social {}
 
 .footer-list {
   display: flex;
   gap: 16px;
 }
-
-.footer-item {}
 
 .footer-link {
   display: flex;
@@ -440,7 +428,6 @@ ul {
   height: 40px;
   background-color: rgba(256, 256, 256, 0.10);
   border-radius: 50%;
-
 }
 
 .footer-link:hover,
@@ -490,7 +477,12 @@ ul {
 
 .portfolio-item {
   width: calc((100% - 2 * var(--gap-photo)) / 3);
+}
 
+.portfolio-item:is(:hover, :focus, :active) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-description {
