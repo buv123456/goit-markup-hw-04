@@ -10,11 +10,13 @@
   --color-text-btn: #4d5ae5;
   --color-logo-ft: #f4f4fd;
   --color-border: #E7E9FC;
+  --color-icon: #8E8F99;
   --bg-team: #f4f4fd;
   --bg-btn-hero: #4d5ae5;
   --bg-btn-pf: #f4f4fd;
   --bg-btn-active: #404bbf;
   --bg-footer: #2e2f42;
+  --bg-title: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   --gap-photo: 24px;
 }
 
@@ -161,7 +163,14 @@ ul {
 /* ----------------SLIDER------------------ */
 .slider {
   padding: 188px 0;
-  background-color: var(--color-title);
+  /* background-color: var(--color-title); */
+  background-image: var(--bg-title), url(../images/bg-people-office.jpg);
+  background-size: cover;
+  /* background-repeat: repeat; */
+  background-position: center;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .slider-title {
@@ -210,6 +219,21 @@ ul {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.advantage-icon {
+  display: flex;
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4FD;
+  border-radius: 4px;
+}
+
+.advantage-item-icon {
+  width: 64px;
 }
 
 .advantage-list {
@@ -283,13 +307,84 @@ ul {
   padding: 32px 16px;
 }
 
-.team-item-title {
+.team-item-title,
+.team-item-text {
   margin-bottom: 8px;
   text-align: center;
 }
 
-.team-item-text {
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-photo);
+}
+
+.social-icon-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-btn-hero);
+  border-radius: 50%;
+}
+
+.social-icon-item {
+  width: 16px;
+  height: 16px;
+
+}
+
+/* ----------------Costumers--------------- */
+
+.costumers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  outline: 2px tomato solid;
+}
+
+.costumers-title {
+  margin-bottom: 72px;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.costumers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-photo);
+}
+
+.costumer-item {}
+
+
+
+.costumer-link {
+  display: flex;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-icon);
+  border-radius: 4px;
+  fill: var(--color-icon);
+}
+
+
+.costumer-link:hover,
+.costumer-link:focus {
+  fill: var(--bg-btn-hero);
+  border: 1px solid var(--bg-btn-hero)
+}
+
+.costumer-item-icon {
+  width: 104px;
+  height: 56px;
+  fill: inherit;
 }
 
 /* ----------------FOOTER------------------ */
@@ -300,7 +395,9 @@ ul {
 }
 
 .footer-items {
+  display: flex;
   max-width: 264px;
+  gap: 120px;
 }
 
 .footer .logo-part {
@@ -308,10 +405,52 @@ ul {
 }
 
 .footer-text {
+  width: 264px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-text-footer);
   margin-top: 16px;
+}
+
+.footer-left-column {}
+
+.social-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.footer-social {}
+
+.footer-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-item {}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(256, 256, 256, 0.10);
+  border-radius: 50%;
+
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--color-success);
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
 }
 
 /* ----------------PAGE PORTFOLIO------------------ */
