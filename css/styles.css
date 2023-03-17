@@ -102,7 +102,6 @@ ul {
   justify-content: space-between;
   padding-top: 24px;
   padding-bottom: 24px;
-
 }
 
 .nav {
@@ -169,8 +168,6 @@ ul {
   background-image: var(--bg-title), url(../images/bg-people-office.jpg);
   background-size: cover;
   background-position: center;
-
-
 }
 
 .slider-title {
@@ -294,7 +291,6 @@ ul {
 .team-list {
   display: flex;
   gap: var(--gap-photo);
-
 }
 
 .team-item {
@@ -337,7 +333,6 @@ ul {
 .social-icon-item {
   width: 16px;
   height: 16px;
-
 }
 
 /* ----------------Costumers--------------- */
