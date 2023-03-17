@@ -169,8 +169,7 @@ ul {
   background-image: var(--bg-title), url(../images/bg-people-office.jpg);
   background-size: cover;
   background-position: center;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 
 }
 
@@ -235,6 +234,7 @@ ul {
 
 .advantage-item-icon {
   width: 64px;
+  height: 64px;
 }
 
 .advantage-list {
@@ -330,6 +330,10 @@ ul {
   border-radius: 50%;
 }
 
+.social-icon-link:is(:hover, :focus, :active) {
+  background-color: var(--color-active);
+}
+
 .social-icon-item {
   width: 16px;
   height: 16px;
@@ -369,8 +373,7 @@ ul {
   color: var(--color-icon);
 }
 
-.costumer-link:hover,
-.costumer-link:focus {
+.costumer-link:is(:hover, :focus, :active) {
   color: var(--bg-btn-hero);
   border: 1px solid var(--bg-btn-hero)
 }
@@ -390,8 +393,6 @@ ul {
 
 .footer-items {
   display: flex;
-  max-width: 264px;
-  gap: 120px;
 }
 
 .footer .logo-part {
@@ -404,6 +405,10 @@ ul {
   letter-spacing: 0.02em;
   color: var(--color-text-footer);
   margin-top: 16px;
+}
+
+.footer-left-column {
+  margin-right: 120px;
 }
 
 .social-title {
@@ -430,8 +435,7 @@ ul {
   border-radius: 50%;
 }
 
-.footer-link:hover,
-.footer-link:focus {
+.footer-link:is(:hover, :focus, :active) {
   background-color: var(--color-success);
 }
 
@@ -484,7 +488,8 @@ ul {
   width: calc((100% - 2 * var(--gap-photo)) / 3);
 }
 
-.portfolio-item:is(:hover, :focus, :active) {
+.portfolio-item-link.link:is(:hover, :focus, :active) {
+  display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
